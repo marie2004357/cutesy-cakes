@@ -1,0 +1,152 @@
+/*gradient header and title*/
+div {
+  text-align: center;
+  width: 100%;
+  height: 175px;
+  margin: 4px, 0, 0, 0;
+  font-size: 80px;
+  font-family: lobster;
+}
+
+div.gradient1 {
+  background: -webkit-linear-gradient(
+    whitesmoke,
+    rgb(243, 154, 243),
+    rgb(121, 55, 143)
+  );
+}
+
+/*background pattern*/
+body {
+  background-image: url("https://i.pinimg.com/originals/af/f2/83/aff2830fbb02c51b2ed725a30f054a42.jpg");
+}
+
+/*cupcake name tags*/
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-container div {
+  width: 100px;
+  margin: 10px;
+  text-align: left;
+  line-height: 10px;
+  font-size: 5px;
+}
+
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 95px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(87, 0, 186, 0.5);
+}
+
+img {
+  border-radius: 50%;
+}
+
+/* Contact and About Us links*/
+ul {
+  list-style-type: none;
+  margin: 15px;
+  padding: 0;
+  overflow: hidden;
+  background-color: none;
+}
+
+li {
+  float: center;
+}
+
+li a {
+  display: table-row-group;
+  color: black;
+  text-align: center;
+  width: 100%;
+  height: 150px;
+  margin: 4px;
+  font-size: 25px;
+  font-family: lobster;
+  padding: 14px, 16px;
+  text-decoration: none;
+}
+/*affects the cupcake name tags only*/
+
+li a:hover :not(.active) {
+  background-color: rgb(17, 17, 17);
+}
+
+button {
+  color: white;
+  background-color: rgb(78, 7, 136);
+  font-size: 1px;
+}
+
+/*Centering paragraph on Contact Us page*/
+p.content {
+  font-family: "Bree Serif", serif;
+  font-size: 30px;
+}
+
+.content {
+  max-width: 500px;
+  margin: auto;
+  font-family: "Bree Serif", serif;
+  padding: 10px;
+}
+
+/*media queries to control visuals on different size screens*/
+@media only screen and (max-width: 800px) {
+  div {
+    text-align: center;
+    font-size: 40px;
+    font-family: lobster;
+    padding: 10px;
+  }
+  img {
+    width: 13%;
+    height: 40%;
+  }
+
+  .w3-container img {
+    min-width: 47%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  div {
+    text-align: center;
+    font-size: 40px;
+    font-family: lobster;
+    padding: 10px;
+  }
+  img {
+    width: 13%;
+    height: 40%;
+  }
+
+  .w3-container img {
+    min-width: 47%;
+  }
+}
+@media only screen and (max-width: 200px) {
+  div {
+    text-align: center;
+    font-size: 40px;
+    font-family: lobster;
+    padding: 10px;
+  }
+  img {
+    width: 13%;
+    height: 40%;
+  }
+
+  .w3-container img {
+    min-width: 47%;
+  }
+}
