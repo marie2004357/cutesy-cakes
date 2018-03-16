@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/marie2004357/cutesy-cakes/issues"
   },
-  "homepage": "https://github.com/marie2004357/cutesy-cakes#readme"
+  "homepage": "https://github.com/marie2004357/cutesy-cakes#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
