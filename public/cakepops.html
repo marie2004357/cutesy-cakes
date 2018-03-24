@@ -12,9 +12,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="js/fresco/fresco.js"></script>
     <link rel="stylesheet" type="text/css" href="css/fresco/fresco.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    
 </head>
 
 <body>
@@ -41,38 +44,82 @@
     <!--thumbnail pictures, click them and the lightbox appears-->
 
     <div>
-        <a href="img/cakepops/bdaypops.jpg"class="fresco"data-fresco-group="cakepops">
+        <!--<a href="img/cakepops/bdaypops.jpg"class="fresco"data-fresco-group="cakepops">-->
             <img src="img/cakepops/bdaypops.jpg"width="200px" height="130px"></a>
 
-        <a href="img/cakepops/donaldduck.jpg"class="fresco"data-fresco-group="cakepops">
+        <!--<a href="img/cakepops/donaldduck.jpg"class="fresco"data-fresco-group="cakepops">-->
             <img src="img/cakepops/donaldduck.jpg"width="200px" height="130px"></a>
                 
-        <a href="img/cakepops/emojipops.jpg"class="fresco"data-fresco-group="cakepops">
+        <!--<a href="img/cakepops/emojipops.jpg"class="fresco"data-fresco-group="cakepops">-->
             <img src="img/cakepops/emojipops.jpg"width="200px" height="130px"></a>
            
-        <a href="img/cakepops/fozziebear.jpg"class="fresco"data-fresco-group="cakepops">
+        <!--<a href="img/cakepops/fozziebear.jpg"class="fresco"data-fresco-group="cakepops">-->
             <img src="img/cakepops/fozziebear.jpg"width="200px" height="130px"></a>
                 
-        <a href="img/cakepops/giftpops.jpg"class="fresco"data-fresco-group="cakepops">
+        <!--<a href="img/cakepops/giftpops.jpg"class="fresco"data-fresco-group="cakepops">-->
             <img src="img/cakepops/giftpops.jpg"width="200px" height="130px"></a>
 
-        <a href="img/cakepops/gingerbreadman.jpg"class="fresco"data-fresco-group="cakepops">
+        <!--<a href="img/cakepops/gingerbreadman.jpg"class="fresco"data-fresco-group="cakepops">-->
             <img src="img/cakepops/gingerbreadman.jpg"width="200px" height="130px"></a>
 
-        <a href="img/cakepops/icecreampop.jpg"class="fresco"data-fresco-group="cakepops">
+        <!--<a href="img/cakepops/icecreampop.jpg"class="fresco"data-fresco-group="cakepops">-->
             <img src="img/cakepops/icecreampop.jpg"width="200px" height="130px"></a>
 
-        <a href="img/cakepops/mrpotatohead.jpg"class="fresco"data-fresco-group="cakepops">
+        <!--<a href="img/cakepops/mrpotatohead.jpg"class="fresco"data-fresco-group="cakepops">-->
             <img src="img/cakepops/mrpotatohead.jpg"width="200px" height="130px"></a>
 
-        <a href="img/cakepops/minionpops.jpg"class="fresco"data-fresco-group="cakepops">
+        <!--<a href="img/cakepops/minionpops.jpg"class="fresco"data-fresco-group="cakepops">-->
             <img src="img/cakepops/minionpops.jpg"width="200px" height="130px"></a>
 
-        <a href="img/cakepops/tweetybird.jpg"class="fresco"data-fresco-group="cakepops">
+        <!--<a href="img/cakepops/tweetybird.jpg"class="fresco"data-fresco-group="cakepops">-->
             <img src="img/cakepops/tweetybird.jpg"width="200px" height="130px"></a>
             
     </div>
+    <h1>Please enter a CakePop flavor...</h1>
+    <div id="list-container"></div>
+    
+        <script id="list-template" type="text/x-handlebars-template">
+          {{#each list}}
+          <div class="row">
+            <div class="col-xs-6"><strong>{{name}}</strong></div>
+            <div class="col-xs-6">{{image}}</div>
+          </div>
+          {{/each}}
+        </script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
+        <script>
+          $(document).ready(function() {
+            const data = { name: "Code Louisvillains" }
+            const greetingTemplate = 'Hello {{name}}! I am a template!';
+            const greetingCompiled = Handlebars.compile(greetingTemplate);
+            const greetingRendered = greetingCompiled(data);
+    
+            $('body h1').first().after(greetingRendered);
+          });
+        </script>
+        <script>
+          $(document).ready(function() {
+            const data = {
+              list: [
+              
+                {name: 'Buffy', <image:"img/cakepops/bdaypops.jpg"width="200px" height="130px"></a>},
+                {name: 'Willow', value: 'Witch'},
+                {name: 'Xander', value: 'Dude, construction worker'},
+                {name: 'Giles', value: 'Watcher, Librarian'},
+                ],
+        };
+      
 
+        const template = $('#list-template').html();
+        const compiled = Handlebars.compile(template);
+        $('#list-container').html(compiled(data));
+      });
+    </script>
+
+    
+          
 </body>
 
 
