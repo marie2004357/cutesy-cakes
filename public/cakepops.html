@@ -75,14 +75,15 @@
             <img src="img/cakepops/tweetybird.jpg"width="200px" height="130px"></a>
             
     </div>
-    <h1>Please enter a CakePop flavor...</h1>
-    <div id="list-container"></div>
+    <body>
+        <h1>A wild webpage appears...</h1>
+        <div id="list-container"></div>
     
         <script id="list-template" type="text/x-handlebars-template">
           {{#each list}}
           <div class="row">
             <div class="col-xs-6"><strong>{{name}}</strong></div>
-            <div class="col-xs-6">{{image}}</div>
+            <div class="col-xs-6">{{value}}</div>
           </div>
           {{/each}}
         </script>
@@ -103,8 +104,7 @@
           $(document).ready(function() {
             const data = {
               list: [
-              
-                {name: 'Buffy', <image:"img/cakepops/bdaypops.jpg"width="200px" height="130px"></a>},
+                {name: 'Buffy', value: 'Slayer, guidance counselor'},
                 {name: 'Willow', value: 'Witch'},
                 {name: 'Xander', value: 'Dude, construction worker'},
                 {name: 'Giles', value: 'Watcher, Librarian'},
@@ -117,6 +117,7 @@
         $('#list-container').html(compiled(data));
       });
     </script>
+
 
     
           
