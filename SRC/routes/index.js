@@ -47,7 +47,7 @@ router.put('/file/:fileId', function(req, res, next) {
     return res.status(404).end(`Could not find file '${fileId}'`);
   }
 
-  file.title = req.body.title;
+  file.id = req.body.id;
   file.description = req.body.description;
   res.json(file);
 });

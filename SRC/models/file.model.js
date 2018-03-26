@@ -2,9 +2,10 @@
 const mongoose = require('mongoose');
 
 const FileSchema = new mongoose.Schema({
-    title: String,
+    id: String,
+    name: String,
     description: String,
-    created_at: { type: Date, default: Date.now },
+    //created_at: { type: Date, default: Date.now },
   });
   
   
@@ -12,18 +13,17 @@ const FileSchema = new mongoose.Schema({
   module.exports = File;
   
   
-  File.count({}, function(err, count) {
-    if (err) {
-      throw err;
-    }
-    
-    if (count > 0) return ;
+  //File.count({}, function(err, count) {
+   // if (err) {
+     // throw err;
+    //}-->
+    //if (count > 0) return ;
   
-    const files = require('./file.seed.json');
-    File.create(files, function(err, newFiles) {
-      if (err) {
-        throw err;
-      }
-      console.log("DB seeded")
-    });
-  });
+   // const files = require('./file.seed.json');
+    //File.create(files, function(err, newFiles) {
+     // if (err) {
+       // throw err;
+     // }
+      //console.log("DB seeded")
+    //});
+  //});
