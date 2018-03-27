@@ -1,10 +1,17 @@
 {
   "name": "cutesy-cakes",
   "version": "1.0.0",
-  "description": "Front-end Code Louisville Project November 2017",
+  "description": "## Install NodeJS",
   "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.7"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -15,10 +22,10 @@
   "bugs": {
     "url": "https://github.com/marie2004357/cutesy-cakes/issues"
   },
-  "homepage": "https://github.com/marie2004357/cutesy-cakes#readme",
-  "dependencies": {
-    "express": "^4.16.3",
-    "mongo": "^0.1.0",
-    "mongoose": "^5.0.11"
+  "homepage": "https://github.com/marie2004357/cutesy-cakes#readme"
+  //"dependencies": {
+  //  "express": "^4.16.3",
+  //  "mongo": "^0.1.0",
+  //  "mongoose": "^5.0.11"
   }
-}
+
