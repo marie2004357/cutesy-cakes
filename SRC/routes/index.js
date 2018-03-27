@@ -10,19 +10,6 @@ const FILES = [
   {id: 'c', title: 'total_recall_poster.jpg', description: 'Quaid, start the reactor...'},
   {id: 'd', title: 'louisville_coffee.txt', description: 'Coffee shop ratings'},
 ];
-//const FILES = [
-  //{id: '1', name: 'Sleeping Baby', Description: 'Vanilla cake with decorative icing'},
-  //{id: '2', name: 'Ladybug Character', Description: 'Red velvet cake with decorative icing'},
-  //{id: '3', name: 'Elmo', Description: 'Yellow cake with decorative icing'},
-  //{id: '4', name: 'Minnie Mouse', Description: 'Dark Chocolate cake with decorative icing'},
-  //{id: '5', name: 'Monkey', Description: 'White cake with decorative icing'},
-  //{id: '6', name: 'Peacock', Description: 'Multi-colored cake with decorative icing'},
-  //{id: '7', name: 'Poop Emoji', Description: 'Chocolate cake with decorative icing'},
-  //{id: '8', name: 'Chanel Purse', Description: 'White Chocolate cake with decorative icing'},
- // {id: '9', name: 'Panda', Description: 'Marble cake with decorative icing'},
-  //{id: '10', name: 'Santa', Description: 'White mint chocolate cake with decorative icing'},
-//];
-
 
 router.use('/doc', function(req, res, next) {
   res.end(`Documentation http://expressjs.com/`);
