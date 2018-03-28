@@ -27,9 +27,8 @@ app.use('/api', router);
 //res.end(`Documentation http://expressjs.com/`);
 // });
 
-
 //app.use(function(req, res, next) {
-  //  res.end("Cutesy Cakes");
+  //res.end("Cutesy Cakes");
 //});
  app.listen(config.port, function() {
  console.log(`${config.appName} is listening on port ${config.port}`);

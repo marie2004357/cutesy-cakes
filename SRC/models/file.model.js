@@ -9,21 +9,21 @@ const FileSchema = new mongoose.Schema({
 
 const File = mongoose.model('File', FileSchema);
 
-//File.count({}, function(err, count) {
-  //if (err) {
-   // throw err;
- // }
+File.count({}, function(err, count) {
+if (err) {
+  throw err;
+ }
   
-  //if (count > 0) return ;
+ if (count > 0) return ;
 
-  //const files = require('./file.seed.json');
-  //File.create(files, function(err, newFiles) {
-   // if (err) {
-     // throw err;
-   // }
-   // console.log("DB seeded")
-  //});
+ const files = require('./file.seed.json');
+ File.create(files, function(err, newFiles) {
+  if (err) {
+     throw err;
+   }
+   console.log("DB seeded")
+  });
 
-//});
+});
 
 module.exports = File;

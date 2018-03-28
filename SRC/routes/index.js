@@ -41,7 +41,7 @@ router.get('/file/:fileId', function(req, res, next) {
   const file = FILES.find(entry => entry.id === fileId);
   if (!file) {
     return res.status(404).end(`Could not find file '${fileId}'`);
-  }
+  };
 
   res.json(file);
 });
