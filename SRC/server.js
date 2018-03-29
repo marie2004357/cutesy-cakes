@@ -10,9 +10,9 @@ const router = require('./routes');
 
 
 // Connect to MongoDB and create/use database as configured
-mongoose.connect(`mongodb://${config.db.host}/${config.db.dbName}/${config.db.username}/${config.db.password}`);
+mongoose.connect('mongodb://testuser:simbai12@ds147965.mlab.com:47965/cookiemonster');
 
-// Import all models
+//Import all models
 require('./models/file.model.js');
 
 const app = express();

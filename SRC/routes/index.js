@@ -73,29 +73,29 @@ router.put('/file/:fileId', function(req, res, next) {
   const File = mongoose.model('File');
   const fileId = req.params.fileId;
 
- // File.findById(fileId, function(err, file) {
-   // if (err) {
-     // console.error(err);
-     // return res.status(500).json(err);
-  //  }
-   // if (!file) {
-    //  return res.status(404).json({message: "File not found"});
-   // }
+  File.findById(fileId, function(err, file) {
+    if (err) {
+      console.error(err);
+      return res.status(500).json(err);
+    }
+    if (!file) {
+      return res.status(404).json({message: "File not found"});
+    }
 
-    //file.title = req.body.title;
-    //file.description = req.body.description;
+    file.title = req.body.title;
+    file.description = req.body.description;
 
-    //file.save(function(err, savedFile) {
-      //if (err) {
-        //console.error(err);
-        //return res.status(500).json(err);
-     // }
+    file.save(function(err, savedFile) {
+      if (err) {
+        console.error(err);
+        return res.status(500).json(err);
+      }
       res.json(savedFile);
     })
 
-  //})
+  })
 
-//});
+});
 
 /**
  * Delete a file

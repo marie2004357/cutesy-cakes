@@ -6,7 +6,9 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "mongoose": "^5.0.7"
+    "mongo": "^0.1.0",
+    "mongoose": "^5.0.12",
+    "npm": "^5.8.0"
   },
   "devDependencies": {},
   "scripts": {
@@ -23,5 +25,4 @@
     "url": "https://github.com/marie2004357/cutesy-cakes/issues"
   },
   "homepage": "https://github.com/marie2004357/cutesy-cakes#readme"
-  }
-
+}
