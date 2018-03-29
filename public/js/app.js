@@ -83,7 +83,17 @@ function getFiles() {
       toggleAddFileFormVisibility();
     }
   }
-  
+  function deleteFileClick(id) {
+    if (confirm("Are you sure?")) {
+      $.ajax({
+        type: 'DELETE',
+        url: '/api/file/' + id,
+        dataType: 'json',
+        contentType : 'application/json',
+      })
+    
+  }
+}
   
   function setFormData(data) {
     data = data || {};

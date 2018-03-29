@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 const FileSchema = new mongoose.Schema({
-  Title: String,
+  title: String,
   description: String,
   created_at: { type: Date, default: Date.now },
 });
