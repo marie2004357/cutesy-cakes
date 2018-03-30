@@ -10,7 +10,7 @@ router.use('/doc', function(req, res, next) {
 });
 
 /**
- * Get a list of all files in the DB
+ * Displays a list of all files in the database
  */
 router.get('/file', function(req, res, next) {
   const fileModel = mongoose.model('File');
@@ -26,7 +26,7 @@ router.get('/file', function(req, res, next) {
 });
 
 /**
- * Get a single file by passing its id as a URL param
+ * 'Get' a single file by passing its fileId as a URL param
  */
 router.get('/file/:fileId', function(req, res, next) {
   const {fileId} = req.params;
@@ -41,7 +41,7 @@ router.get('/file/:fileId', function(req, res, next) {
 });
 
 /**
- * Create a new file
+ * New file created
  */
 router.post('/file', function(req, res, next) {
   const File = mongoose.model('File');
@@ -61,7 +61,7 @@ router.post('/file', function(req, res, next) {
 });
 
 /**
- * Update an existing file
+ * Existing files updated 
  */
 router.put('/file/:fileId', function(req, res, next) {
   const File = mongoose.model('File');
