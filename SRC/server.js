@@ -5,11 +5,11 @@ const bodyParser = require('body-parser');
 const config = require('./config');
 const router = require('./routes');
 
- // Load mongoose package
+ // This loads the mongoose package
  const mongoose = require('mongoose');
 
 
-// Connect to MongoDB and create/use database as configured
+// This connects to MongoDB (this comes straight from the MongoDB that you created)
 mongoose.connect('mongodb://testuser:simbai12@ds147965.mlab.com:47965/cookiemonster');
 
 //Import all models
