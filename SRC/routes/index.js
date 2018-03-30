@@ -99,7 +99,7 @@ router.delete('/file/:fileId', function(req, res, next) {
   const fileId = req.params.fileId;
   
   File.remove({_id:fileId}, function(err) {
-    
+    res.json("delete file")
   });
 
 });
