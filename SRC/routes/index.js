@@ -3,13 +3,7 @@ const router = require('express').Router();
 const mongoose = require('mongoose');
 
 
-// Totally fake data
-const FILES = [
-  {id: 'a', title: 'cutecat1.jpg', description: 'A cute cat'},
-  {id: 'b', title: 'uglycat1.jpg', description: 'Just kidding, all cats are cute'},
-  {id: 'c', title: 'total_recall_poster.jpg', description: 'Quaid, start the reactor...'},
-  {id: 'd', title: 'louisville_coffee.txt', description: 'Coffee shop ratings'},
-];
+
 
 router.use('/doc', function(req, res, next) {
   res.end(`Documentation http://expressjs.com/`);
@@ -101,7 +95,13 @@ router.put('/file/:fileId', function(req, res, next) {
  * Delete a file
  */
 router.delete('/file/:fileId', function(req, res, next) {
-  res.end(`Deleting file '${req.params.fileId}'`);
+  const File = mongoose.model('File');
+  const fileId = req.params.fileId;
+  
+  File.remove({_id:fileId}, function(err) {
+    
+  });
+
 });
 
 

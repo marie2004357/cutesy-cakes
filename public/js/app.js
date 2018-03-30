@@ -51,7 +51,7 @@ function getFiles() {
     } else {
       method = 'POST';
       url = '/api/file';
-    }
+    } 
   
     $.ajax({
       type: method,
@@ -83,7 +83,8 @@ function getFiles() {
       toggleAddFileFormVisibility();
     }
   }
-  function deleteFileClick(id) {
+    
+  function handleDeleteFileClick(id) {
     if (confirm("Are you sure?")) {
       $.ajax({
         type: 'DELETE',
@@ -91,10 +92,19 @@ function getFiles() {
         dataType: 'json',
         contentType : 'application/json',
       })
-    
+      .done(function(response) {
+        console.log("We have del the data");
+        refreshFileList();
+      })
+      .fail(function(error) {
+        console.log("Failures at posting, we are", error);
+      })
+    }
   }
-}
-  
+        
+
+     
+     
   function setFormData(data) {
     data = data || {};
   
